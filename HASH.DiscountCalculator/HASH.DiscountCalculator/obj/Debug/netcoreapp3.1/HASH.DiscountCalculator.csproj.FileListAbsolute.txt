@@ -52,3 +52,4 @@ C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculato
 C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculator\obj\Debug\netcoreapp3.1\HASH.DiscountCalculator.dll
 C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculator\obj\Debug\netcoreapp3.1\HASH.DiscountCalculator.pdb
 C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculator\obj\Debug\netcoreapp3.1\HASH.DiscountCalculator.genruntimeconfig.cache
+C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculator\obj\Debug\netcoreapp3.1\HASH.DiscountCalculator.csprojAssemblyReference.cache

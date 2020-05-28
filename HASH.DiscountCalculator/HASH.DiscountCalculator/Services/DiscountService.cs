@@ -37,7 +37,6 @@ namespace HASH.DiscountCalculator.Services
             product.CheckBlackFridayDiscount();
             product.CheckDiscountLimit();
 
-
             return product.ParseToProductModel();
         }
 

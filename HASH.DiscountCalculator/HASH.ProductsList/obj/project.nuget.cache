@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "htAKo6/U9F4oPDYnuon3Y2Y27K26BCCOYjNpmTw8lpicZtPj4jL2eBlBoSoeZUYuMlUzxSy3h7YJeTLtQ16+0g==",
+  "dgSpecHash": "b0WGWF4oaT5zxQ9DUUGJX2Iu1ljRaj5Pvyg5wzjumLOoAUVjuk6Jwz02hDOCFolTuJlMTXj1ah/W3EGBYXon6g==",
   "success": true,
   "projectFilePath": "C:\\Repos\\hash-discount-calculator\\HASH.DiscountCalculator\\HASH.ProductsList\\HASH.ProductsList.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "C:\\Users\\Gabriel Straube\\.nuget\\packages\\grpc.net.common\\2.29.0\\grpc.net.common.2.29.0.nupkg.sha512",
     "C:\\Users\\Gabriel Straube\\.nuget\\packages\\grpc.tools\\2.29.0\\grpc.tools.2.29.0.nupkg.sha512",
     "C:\\Users\\Gabriel Straube\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\2.1.1\\microsoft.extensions.logging.abstractions.2.1.1.nupkg.sha512",
+    "C:\\Users\\Gabriel Straube\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\Gabriel Straube\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.5.1\\system.diagnostics.diagnosticsource.4.5.1.nupkg.sha512",
     "C:\\Users\\Gabriel Straube\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
   ],

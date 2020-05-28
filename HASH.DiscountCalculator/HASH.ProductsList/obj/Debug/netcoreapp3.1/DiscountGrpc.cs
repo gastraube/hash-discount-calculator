@@ -28,32 +28,50 @@ namespace HASH.DiscountCalculator {
       get { return global::HASH.DiscountCalculator.DiscountReflection.Descriptor.Services[0]; }
     }
 
-    /// <summary>Base class for server-side implementations of Discount</summary>
-    [grpc::BindServiceMethod(typeof(Discount), "BindService")]
-    public abstract partial class DiscountBase
+    /// <summary>Client for Discount</summary>
+    public partial class DiscountClient : grpc::ClientBase<DiscountClient>
     {
-      public virtual global::System.Threading.Tasks.Task<global::HASH.DiscountCalculator.ProductModel> CalculateDiscount(global::HASH.DiscountCalculator.ProductLookUpModel request, grpc::ServerCallContext context)
+      /// <summary>Creates a new client for Discount</summary>
+      /// <param name="channel">The channel to use to make remote calls.</param>
+      public DiscountClient(grpc::ChannelBase channel) : base(channel)
       {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+      /// <summary>Creates a new client for Discount that uses a custom <c>CallInvoker</c>.</summary>
+      /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      public DiscountClient(grpc::CallInvoker callInvoker) : base(callInvoker)
+      {
+      }
+      /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      protected DiscountClient() : base()
+      {
+      }
+      /// <summary>Protected constructor to allow creation of configured clients.</summary>
+      /// <param name="configuration">The client configuration.</param>
+      protected DiscountClient(ClientBaseConfiguration configuration) : base(configuration)
+      {
       }
 
-    }
-
-    /// <summary>Creates service definition that can be registered with a server</summary>
-    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
-    public static grpc::ServerServiceDefinition BindService(DiscountBase serviceImpl)
-    {
-      return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_CalculateDiscount, serviceImpl.CalculateDiscount).Build();
-    }
-
-    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
-    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
-    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
-    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
-    public static void BindService(grpc::ServiceBinderBase serviceBinder, DiscountBase serviceImpl)
-    {
-      serviceBinder.AddMethod(__Method_CalculateDiscount, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::HASH.DiscountCalculator.ProductLookUpModel, global::HASH.DiscountCalculator.ProductModel>(serviceImpl.CalculateDiscount));
+      public virtual global::HASH.DiscountCalculator.ProductModel CalculateDiscount(global::HASH.DiscountCalculator.ProductLookUpModel request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CalculateDiscount(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::HASH.DiscountCalculator.ProductModel CalculateDiscount(global::HASH.DiscountCalculator.ProductLookUpModel request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CalculateDiscount, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::HASH.DiscountCalculator.ProductModel> CalculateDiscountAsync(global::HASH.DiscountCalculator.ProductLookUpModel request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CalculateDiscountAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::HASH.DiscountCalculator.ProductModel> CalculateDiscountAsync(global::HASH.DiscountCalculator.ProductLookUpModel request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CalculateDiscount, null, options, request);
+      }
+      /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      protected override DiscountClient NewInstance(ClientBaseConfiguration configuration)
+      {
+        return new DiscountClient(configuration);
+      }
     }
 
   }
