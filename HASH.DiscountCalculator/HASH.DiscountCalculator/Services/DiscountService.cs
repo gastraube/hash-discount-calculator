@@ -4,6 +4,8 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using Grpc.Core;
+using HASH.DiscountCalculator.Models;
+using HASH.DiscountCalculator.Repositories;
 using Microsoft.Extensions.Logging;
 
 namespace HASH.DiscountCalculator.Services
@@ -11,41 +13,43 @@ namespace HASH.DiscountCalculator.Services
     public class DiscountService : Discount.DiscountBase
     {
         private readonly ILogger<DiscountService> _logger;
-        public DiscountService(ILogger<DiscountService> logger)
+        private readonly IProductRepository _productRepository;
+        private readonly IUserRepository _userRepository;
+
+        public DiscountService(ILogger<DiscountService> logger, IProductRepository productRepository, IUserRepository userRepository)
         {
             _logger = logger;
+            _productRepository = productRepository;
+            _userRepository = userRepository;
         }
 
-        public override Task<ProductModel> CalculateDiscount(ProductLookUpModel request, ServerCallContext context)
+        public override async Task<ProductModel> CalculateDiscount(ProductLookUpModel request, ServerCallContext context)
         {          
-            var product = SearchProduct(request);
+            var product = await GetProductById(request.ProductId);
+            var user = await GetUserById(request.UserId);
 
-            var productWithDiscount = CalculateProsductDiscount(product, request);
-
-            return Task.FromResult(product);
+            return CalculateProducstDiscount(product, user);
         }
 
-        private object CalculateProsductDiscount(ProductModel product, ProductLookUpModel request)
+        private ProductModel CalculateProducstDiscount(Product product, User user)
         {
-            throw new NotImplementedException();
+            product.CheckBirthDayDiscount(user.BirthDate);
+            product.CheckBlackFridayDiscount();
+            product.CheckDiscountLimit();
+
+
+            return product.ParseToProductModel();
         }
 
-        private ProductModel SearchProduct(ProductLookUpModel request)
+        private async Task<Product> GetProductById(string productId)
         {
-            var product1 = new ProductModel()
-            {
-                Id = "1",
-                Description = "Copo Plástico, vermelho, 200ml",
-                PriceInCents = 10,
-                Title = "Copo Plástico"
-            };
-
-            var productsList = new List<ProductModel>();
-            productsList.Add(product1);
-
-            var product = productsList.Where(product => product.Id == request.ProductId).FirstOrDefault();
-
-            return product;
+            return await _productRepository.GetProductById(productId);
         }
+
+        private async Task<User> GetUserById(string userId)
+        {
+            return await _userRepository.GetUserById(userId);
+        }
+        
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using HASH.DiscountCalculator.Repositories;
 using HASH.DiscountCalculator.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -18,6 +19,8 @@ namespace HASH.DiscountCalculator
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddGrpc();
+            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -32,7 +35,6 @@ namespace HASH.DiscountCalculator
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGrpcService<GreeterService>();
                 endpoints.MapGrpcService<DiscountService>();
 
                 endpoints.MapGet("/", async context =>

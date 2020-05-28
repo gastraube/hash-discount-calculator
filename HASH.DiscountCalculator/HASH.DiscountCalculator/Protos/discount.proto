@@ -23,4 +23,3 @@ message DiscountModel {
   float pct = 1;
   int32 value_in_cents = 2;
 }
-
