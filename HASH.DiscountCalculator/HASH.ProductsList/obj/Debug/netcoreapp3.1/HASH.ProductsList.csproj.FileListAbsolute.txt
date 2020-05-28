@@ -1,0 +1,10 @@
+C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.ProductsList\bin\Debug\netcoreapp3.1\HASH.ProductsList.exe
+C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.ProductsList\obj\Debug\netcoreapp3.1\HASH.ProductsList.AssemblyInfoInputs.cache
+C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.ProductsList\obj\Debug\netcoreapp3.1\HASH.ProductsList.AssemblyInfo.cs
+C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.ProductsList\bin\Debug\netcoreapp3.1\Google.Protobuf.dll
+C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.ProductsList\obj\Debug\netcoreapp3.1\HASH.ProductsList.csprojAssemblyReference.cache
+C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.ProductsList\obj\Debug\netcoreapp3.1\HASH.ProductsList.csproj.CopyComplete
+C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.ProductsList\bin\Debug\netcoreapp3.1\Grpc.Core.Api.dll
+C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.ProductsList\bin\Debug\netcoreapp3.1\Grpc.Net.Client.dll
+C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.ProductsList\bin\Debug\netcoreapp3.1\Grpc.Net.Common.dll
+C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.ProductsList\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
