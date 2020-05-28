@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option csharp_namespace = "HASH.DiscountCalculator";
+
+service Discount {
+  rpc CalculateDiscount (ProductLookUpModel) returns (ProductModel);
+}
+
+message ProductLookUpModel {
+  string userId = 1;
+  string productId = 2;
+}
+
+message ProductModel {
+  string id = 1;
+  int32 price_in_cents = 2;
+  string title = 3;
+  string description = 4;
+  DiscountModel discount = 5;
+}
+
+message DiscountModel {
+  float pct = 1;
+  int32 value_in_cents = 2;
+}
+
