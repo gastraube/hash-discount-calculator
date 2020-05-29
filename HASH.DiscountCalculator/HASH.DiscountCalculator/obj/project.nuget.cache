@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "+NWNFspRm2amu/4phdJ/weMzyFnKzHj+slB//qRn0MxkyNa2a8zCx1ZS86BKBl9C8ZqUsavBez/isv52almLsQ==",
+  "dgSpecHash": "IGyxu/RIly6GIKCdpmawpsnRIwWalgizofW72NzSfrhHDUl2DFK0BkU39A84cHy0azkpBsahkTcn5v/FiEtCnA==",
   "success": true,
   "projectFilePath": "C:\\Repos\\hash-discount-calculator\\HASH.DiscountCalculator\\HASH.DiscountCalculator\\HASH.DiscountCalculator.csproj",
   "expectedPackageFiles": [
@@ -8,7 +8,8 @@
     "C:\\Users\\Gabriel Straube\\.nuget\\packages\\grpc.aspnetcore\\2.27.0\\grpc.aspnetcore.2.27.0.nupkg.sha512",
     "C:\\Users\\Gabriel Straube\\.nuget\\packages\\grpc.aspnetcore.server\\2.27.0\\grpc.aspnetcore.server.2.27.0.nupkg.sha512",
     "C:\\Users\\Gabriel Straube\\.nuget\\packages\\grpc.aspnetcore.server.clientfactory\\2.27.0\\grpc.aspnetcore.server.clientfactory.2.27.0.nupkg.sha512",
-    "C:\\Users\\Gabriel Straube\\.nuget\\packages\\grpc.core.api\\2.27.0\\grpc.core.api.2.27.0.nupkg.sha512",
+    "C:\\Users\\Gabriel Straube\\.nuget\\packages\\grpc.core\\2.29.0\\grpc.core.2.29.0.nupkg.sha512",
+    "C:\\Users\\Gabriel Straube\\.nuget\\packages\\grpc.core.api\\2.29.0\\grpc.core.api.2.29.0.nupkg.sha512",
     "C:\\Users\\Gabriel Straube\\.nuget\\packages\\grpc.net.client\\2.27.0\\grpc.net.client.2.27.0.nupkg.sha512",
     "C:\\Users\\Gabriel Straube\\.nuget\\packages\\grpc.net.clientfactory\\2.27.0\\grpc.net.clientfactory.2.27.0.nupkg.sha512",
     "C:\\Users\\Gabriel Straube\\.nuget\\packages\\grpc.net.common\\2.27.0\\grpc.net.common.2.27.0.nupkg.sha512",

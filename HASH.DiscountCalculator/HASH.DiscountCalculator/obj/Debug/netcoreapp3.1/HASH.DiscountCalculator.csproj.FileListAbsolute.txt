@@ -43,8 +43,6 @@ C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculato
 C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculator\bin\Debug\netcoreapp3.1\Grpc.Net.Common.dll
 C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculator\obj\Debug\netcoreapp3.1\HASH.DiscountCalculator.AssemblyInfoInputs.cache
 C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculator\obj\Debug\netcoreapp3.1\HASH.DiscountCalculator.AssemblyInfo.cs
-C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculator\obj\Debug\netcoreapp3.1\HASH.DiscountCalculator.csproj.CoreCompileInputs.cache
-C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculator\obj\Debug\netcoreapp3.1\HASH.DiscountCalculator.MvcApplicationPartsAssemblyInfo.cache
 C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculator\obj\Debug\netcoreapp3.1\HASH.DiscountCalculator.RazorTargetAssemblyInfo.cache
 C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculator\obj\Debug\netcoreapp3.1\HASH.DiscountCalculator.csproj.CopyComplete
 C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculator\obj\Debug\netcoreapp3.1\staticwebassets\HASH.DiscountCalculator.StaticWebAssets.Manifest.cache
@@ -53,3 +51,12 @@ C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculato
 C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculator\obj\Debug\netcoreapp3.1\HASH.DiscountCalculator.pdb
 C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculator\obj\Debug\netcoreapp3.1\HASH.DiscountCalculator.genruntimeconfig.cache
 C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculator\obj\Debug\netcoreapp3.1\HASH.DiscountCalculator.csprojAssemblyReference.cache
+C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculator\bin\Debug\netcoreapp3.1\Grpc.Core.dll
+C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculator\bin\Debug\netcoreapp3.1\runtimes\linux\native\libgrpc_csharp_ext.x64.so
+C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculator\bin\Debug\netcoreapp3.1\runtimes\linux\native\libgrpc_csharp_ext.x86.so
+C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculator\bin\Debug\netcoreapp3.1\runtimes\osx\native\libgrpc_csharp_ext.x64.dylib
+C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculator\bin\Debug\netcoreapp3.1\runtimes\osx\native\libgrpc_csharp_ext.x86.dylib
+C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculator\bin\Debug\netcoreapp3.1\runtimes\win\native\grpc_csharp_ext.x64.dll
+C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculator\bin\Debug\netcoreapp3.1\runtimes\win\native\grpc_csharp_ext.x86.dll
+C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculator\obj\Debug\netcoreapp3.1\HASH.DiscountCalculator.csproj.CoreCompileInputs.cache
+C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculator\obj\Debug\netcoreapp3.1\HASH.DiscountCalculator.MvcApplicationPartsAssemblyInfo.cache

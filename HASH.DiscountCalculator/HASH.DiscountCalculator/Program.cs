@@ -3,8 +3,12 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Grpc.Core;
+using HASH.DiscountCalculator.Repositories;
+using HASH.DiscountCalculator.Services;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 
 namespace HASH.DiscountCalculator
 {
@@ -12,7 +16,24 @@ namespace HASH.DiscountCalculator
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+            const int Port = 50051;
+
+            var productRepository = new ProductRepository();
+            var userRepository = new UserRepository();           
+
+            Server server = new Server
+            {
+                Services = { Discount.BindService(new DiscountService(productRepository, userRepository)) },
+                Ports = { new ServerPort("localhost", Port, ServerCredentials.Insecure) }
+            };
+            server.Start();
+
+            Console.WriteLine("Greeter server listening on port " + Port);
+            Console.WriteLine("Press any key to stop the server...");
+            Console.ReadKey();
+
+            server.ShutdownAsync().Wait();
+            
         }
 
         // Additional configuration is required to successfully run gRPC on macOS.

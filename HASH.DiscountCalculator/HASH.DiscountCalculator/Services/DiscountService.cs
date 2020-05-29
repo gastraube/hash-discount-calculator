@@ -16,9 +16,8 @@ namespace HASH.DiscountCalculator.Services
         private readonly IProductRepository _productRepository;
         private readonly IUserRepository _userRepository;
 
-        public DiscountService(ILogger<DiscountService> logger, IProductRepository productRepository, IUserRepository userRepository)
-        {
-            _logger = logger;
+        public DiscountService(IProductRepository productRepository, IUserRepository userRepository)
+        {            
             _productRepository = productRepository;
             _userRepository = userRepository;
         }
@@ -28,7 +27,9 @@ namespace HASH.DiscountCalculator.Services
             var product = await GetProductById(request.ProductId);
             var user = await GetUserById(request.UserId);
 
-            return CalculateProducstDiscount(product, user);
+            var prod = CalculateProducstDiscount(product, user);
+
+            return prod;
         }
 
         private ProductModel CalculateProducstDiscount(Product product, User user)
