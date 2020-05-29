@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Produtos</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    
+</head>
+<body class="container">
+    
+    <h1 class="text-center">Products</h1>
+    
+    <div id="messageView"></div>  
+    
+    <div id="productsView"></div>
+    
+    <script src="js/app/models/ProductsList.js"></script>
+    <script src="js/app/models/Product.js"></script>
+    <script src="js/app/models/Discount.js"></script>
+    <script src="js/app/views/View.js"></script>
+    <script src="js/app/views/ProductsView.js"></script>
+    <script src="js/app/views/MessageView.js"></script>
+    <script src="js/app/controllers/ProductController.js"></script>
+    
+    <script>
+        var productController = new ProductController();
+    </script> 
+
+
+</body>
+</html>
