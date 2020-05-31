@@ -50,7 +50,6 @@ C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculato
 C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculator\obj\Debug\netcoreapp3.1\HASH.DiscountCalculator.dll
 C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculator\obj\Debug\netcoreapp3.1\HASH.DiscountCalculator.pdb
 C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculator\obj\Debug\netcoreapp3.1\HASH.DiscountCalculator.genruntimeconfig.cache
-C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculator\obj\Debug\netcoreapp3.1\HASH.DiscountCalculator.csprojAssemblyReference.cache
 C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculator\bin\Debug\netcoreapp3.1\Grpc.Core.dll
 C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculator\bin\Debug\netcoreapp3.1\runtimes\linux\native\libgrpc_csharp_ext.x64.so
 C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculator\bin\Debug\netcoreapp3.1\runtimes\linux\native\libgrpc_csharp_ext.x86.so

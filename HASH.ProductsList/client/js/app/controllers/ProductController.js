@@ -7,8 +7,7 @@ class ProductController{
             this._productsList = new ProductsList()
             this._service = new ProductsService();
 
-            var discount = new Discount(0, 0);
-            var product = new Product("1", 2, "Titulo", "Descricao", discount)
+            getProducts();
 
             this._productsList.add(product)
 
@@ -34,4 +33,44 @@ class ProductController{
                     ).catch(erro => console.log(erro));
             });   
         }
+
+        getProducts(){
+            this._productsList.add(new Product(
+            
+                "1",
+                "Copo Plástico, vermelho, 200ml.",
+                10,
+                "Copo Plástico"
+            ));
+
+            this._productsList.add(new Product(
+            
+                "2",
+                "iPhone 11 Pro Max novo na caixa.",
+                100000000,
+                "iPhone 11"
+            ));
+            
+
+            this._productsList.add(new Product(
+                "3",
+                "Relógio de pulso, preto.",
+                200,
+                "Relógio"
+            ));
+
+            this._productsList.add(new Product(
+                "4",
+                "Monitor LED 30 polegadas.",
+                3000,
+                "Monitor LED"
+            ));
+
+            this._productsList.add(new Product(
+                "5",
+                "Tênis de corrida, preto, Nike.",
+                570,
+                "Tênis de Corrida"
+            ));
+        }        
 }

@@ -36,11 +36,10 @@ namespace HASH.DiscountCalculator.Repositories
                 Description = "Monitor LED 30 polegadas.",
                 PriceCents = 3000,
                 Title = "Monitor LED"
-            },
-            ,
+            },            
             new Product()
             {
-                Id = "4",
+                Id = "5",
                 Description = "Tênis de corrida, preto, Nike.",
                 PriceCents = 570,
                 Title = "Tênis de Corrida"
