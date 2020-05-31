@@ -23,7 +23,18 @@ namespace HASH.DiscountCalculator.Services
         }
 
         public override async Task<ProductModel> CalculateDiscount(ProductLookUpModel request, ServerCallContext context)
-        {          
+        {
+
+            if (request == null)
+                throw new ArgumentNullException(nameof(request));
+
+            if (string.IsNullOrEmpty(request.ProductId))           
+                throw new ArgumentNullException(nameof(request.ProductId));
+
+            if (string.IsNullOrEmpty(request.UserId))
+                throw new ArgumentNullException(nameof(request.UserId));
+
+
             var product = await GetProductById(request.ProductId);
             var user = await GetUserById(request.UserId);
 
@@ -34,21 +45,49 @@ namespace HASH.DiscountCalculator.Services
 
         private ProductModel CalculateProducstDiscount(Product product, User user)
         {
-            product.CheckBirthDayDiscount(user.BirthDate);
-            product.CheckBlackFridayDiscount();
-            product.CheckDiscountLimit();
+            try
+            {
+                if (user.BirthDate == null)
+                    throw new ArgumentNullException(nameof(user.BirthDate));
 
+                product.CheckBirthDayDiscount(user.BirthDate);
+                product.CheckBlackFridayDiscount();
+                product.CheckDiscountLimit();
+            }
+            catch (Exception)
+            {
+                ResetDiscounts(product);
+            }
+            
             return product.ParseToProductModel();
+        }
+
+        private Product ResetDiscounts(Product product)
+        {
+            product.Discount.Percentage = 0;
+            product.Discount.ValueCents = 0;
+
+            return product;
         }
 
         private async Task<Product> GetProductById(string productId)
         {
-            return await _productRepository.GetProductById(productId);
+            var product = await _productRepository.GetProductById(productId);
+
+            if (product == null)
+                throw new ArgumentNullException($"Product with id: {productId} not found");
+
+            return product;
         }
 
         private async Task<User> GetUserById(string userId)
         {
-            return await _userRepository.GetUserById(userId);
+            var user = await _userRepository.GetUserById(userId);
+
+            if (user == null)
+                throw new ArgumentNullException($"User with id: {user} not found");
+
+            return user;
         }
         
     }

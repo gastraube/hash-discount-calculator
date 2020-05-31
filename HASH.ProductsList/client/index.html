@@ -11,8 +11,14 @@
     
     <h1 class="text-center">Products</h1>
     
-    <div id="messageView"></div>  
-    
+    <div class="text-center">
+        <button onclick="productController.getCalculatedProductDiscount();" class="btn btn-primary text-center" type="button">
+            Calcular Descontos
+        </button>
+    </div> 
+    <br>
+
+    <div id="messageView"></div>      
     <div id="productsView"></div>
     
     <script src="js/app/models/ProductsList.js"></script>
@@ -21,6 +27,8 @@
     <script src="js/app/views/View.js"></script>
     <script src="js/app/views/ProductsView.js"></script>
     <script src="js/app/views/MessageView.js"></script>
+    <script src="js/app/services/HttpService.js"></script>
+    <script src="js/app/services/ProductsService.js"></script>
     <script src="js/app/controllers/ProductController.js"></script>
     
     <script>

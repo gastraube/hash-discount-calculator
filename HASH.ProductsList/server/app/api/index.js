@@ -21,12 +21,7 @@ api.product = function(req, res) {
     var client = new discount_proto.Discount('localhost:50051',
     grpc.credentials.createInsecure());
 
-    var productLookUpModel = {
-    userId : '1',
-    productId : '1'
-    };
-
-    client.CalculateDiscount(productLookUpModel, function(err, response) {
+    client.CalculateDiscount(req.body, function(err, response) {
         res.status(200).json(response);
     });
  };

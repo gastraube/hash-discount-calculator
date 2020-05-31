@@ -12,10 +12,40 @@ namespace HASH.DiscountCalculator.Repositories
             new Product()
             {
                 Id = "1",
-                Description = "Copo Plástico, vermelho, 200ml",
+                Description = "Copo Plástico, vermelho, 200ml.",
                 PriceCents = 10,
                 Title = "Copo Plástico"
-            }            
+            },
+            new Product()
+            {
+                Id = "2",
+                Description = "iPhone 11 Pro Max novo na caixa.",
+                PriceCents = 100000000,
+                Title = "iPhone 11"
+            },
+            new Product()
+            {
+                Id = "3",
+                Description = "Relógio de pulso, preto.",
+                PriceCents = 200,
+                Title = "Relógio"
+            },
+            new Product()
+            {
+                Id = "4",
+                Description = "Monitor LED 30 polegadas.",
+                PriceCents = 3000,
+                Title = "Monitor LED"
+            },
+            ,
+            new Product()
+            {
+                Id = "4",
+                Description = "Tênis de corrida, preto, Nike.",
+                PriceCents = 570,
+                Title = "Tênis de Corrida"
+            }
+
         };
         
         public Task<Product> GetProductById(string productId)
