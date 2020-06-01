@@ -29,7 +29,7 @@ class ProductsView extends View {
                         <td>${p.price_in_cents}</td>
                         <td>${p.title}</td>
                         <td>${p.description}</td>
-                        <td>${p.discount.pct}</td>
+                        <td>${parseFloat(p.discount.pct).toFixed(2)}%</td>
                         <td>${p.discount.value_in_cents}</td>
                     </tr>
                     

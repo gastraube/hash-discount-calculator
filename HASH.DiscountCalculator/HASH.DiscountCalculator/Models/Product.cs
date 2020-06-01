@@ -20,7 +20,7 @@ namespace HASH.DiscountCalculator.Models
 
         public void CheckBirthDayDiscount(DateTime userBirthDay)
         {
-            if (userBirthDay == DateTime.Now.Date) {
+            if (userBirthDay.Date == DateTime.Now.Date) {
                 Discount.Percentage = 0.05F;
                 Discount.ValueCents = (int)(PriceCents * Discount.Percentage);              
             }

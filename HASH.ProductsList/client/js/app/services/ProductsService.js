@@ -15,7 +15,9 @@ class ProductsService {
             this._http
             .get('/product', productLookUpModel)
             .then(objeto => 
-                resolve(new Product(objeto.id, objeto.price_in_cents, objeto.title, objeto.description, objeto.discount))
+                {
+                    resolve(new Product(objeto.id, objeto.price_in_cents, objeto.title, objeto.description, objeto.discount))
+                }
             )
             .catch(erro => {
                 console.log(erro)

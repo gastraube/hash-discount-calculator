@@ -7,9 +7,7 @@ class ProductController{
             this._productsList = new ProductsList()
             this._service = new ProductsService();
 
-            getProducts();
-
-            this._productsList.add(product)
+            this._getProducts();
 
             this._productsView = new ProductsView($('#productsView'));            
             this._productsView.update(this._productsList);
@@ -20,57 +18,62 @@ class ProductController{
             this._productsList.products.forEach(product => { 
 
                 this._service
-                    .calculateProductDiscount(product.id, '1')
+                    .calculateProductDiscount(product.id, '3')
                     .then(product => {
 
-                        if(!this._productsList.products.some(actualProduct =>
-                            JSON.stringify(product) == JSON.stringify(actualProduct))){
-                                this._productsList.add(product)
-                        }
-
+                        let updatedItem =  this._productsList.products.find((p) => { return p.id === product.id })
+                        updatedItem.setDiscount(product._discount);
+                        
                         this._productsView.update(this._productsList);
                     }
                     ).catch(erro => console.log(erro));
             });   
         }
 
-        getProducts(){
+        _getProducts(){
+
+            var initialDiscount = new Discount(0,0);
+
             this._productsList.add(new Product(
             
-                "1",
+                "1",            
+                10,                
+                "Copo Plástico",
                 "Copo Plástico, vermelho, 200ml.",
-                10,
-                "Copo Plástico"
+                initialDiscount
             ));
 
             this._productsList.add(new Product(
             
-                "2",
+                "2",                
+                1000,               
+                "iPhone 11",
                 "iPhone 11 Pro Max novo na caixa.",
-                100000000,
-                "iPhone 11"
+                initialDiscount
             ));
             
-
             this._productsList.add(new Product(
-                "3",
-                "Relógio de pulso, preto.",
-                200,
-                "Relógio"
+                "3",                
+                150,
+                "Relógio",
+                "Relógio de pulso, preto.",                
+                initialDiscount
             ));
 
             this._productsList.add(new Product(
-                "4",
+                "4",                
+                3000,               
+                "Monitor LED",
                 "Monitor LED 30 polegadas.",
-                3000,
-                "Monitor LED"
+                initialDiscount
             ));
 
             this._productsList.add(new Product(
-                "5",
+                "5",                
+                570,            
+                "Tênis de Corrida",
                 "Tênis de corrida, preto, Nike.",
-                570,
-                "Tênis de Corrida"
-            ));
+                initialDiscount
+            ));      
         }        
 }

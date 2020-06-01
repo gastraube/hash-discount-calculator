@@ -12,9 +12,23 @@ namespace HASH.DiscountCalculator.Repositories
             new User()
             {
                 Id = "1",
-                FirstName = "Gabriel",
-                LastName = "Straube",
+                FirstName = "Joao",
+                LastName = "Carlos",
                 BirthDate = new DateTime(1993, 6, 18)
+            },
+            new User()
+            {
+                Id = "2",
+                FirstName = "Ana",
+                LastName = "Claudia",
+                BirthDate = new DateTime(1989, 11, 25)
+            },
+            new User()
+            {
+                Id = "3",
+                FirstName = "Maria",
+                LastName = "Luiza'",
+                BirthDate = DateTime.Now
             }
         };
 

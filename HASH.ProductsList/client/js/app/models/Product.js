@@ -34,4 +34,9 @@ class Product{
         
         return this._discount;
     }
+
+    setDiscount(discount){
+        return this._discount = discount;
+    }
+
 }

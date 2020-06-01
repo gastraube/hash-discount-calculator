@@ -15,6 +15,9 @@ class HttpService{
 
                     if (xhr.status == 200) {
 
+                        if(xhr.responseText == "")
+                            reject("Invalid JSON response");
+
                         resolve(JSON.parse(xhr.responseText));
                     } else {
 

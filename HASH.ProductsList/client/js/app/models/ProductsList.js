@@ -12,4 +12,9 @@ class ProductsList {
         
         return [].concat(this._products);
     }
+
+    empty(){
+        this._products = [];        
+    }
+    
 }

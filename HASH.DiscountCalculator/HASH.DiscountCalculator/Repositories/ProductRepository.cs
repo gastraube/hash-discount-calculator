@@ -20,14 +20,14 @@ namespace HASH.DiscountCalculator.Repositories
             {
                 Id = "2",
                 Description = "iPhone 11 Pro Max novo na caixa.",
-                PriceCents = 100000000,
+                PriceCents = 1000,
                 Title = "iPhone 11"
             },
             new Product()
             {
                 Id = "3",
                 Description = "Relógio de pulso, preto.",
-                PriceCents = 200,
+                PriceCents = 150,
                 Title = "Relógio"
             },
             new Product()
