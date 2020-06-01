@@ -38,12 +38,12 @@ namespace HASH.DiscountCalculator.Services
             var product = await GetProductById(request.ProductId);
             var user = await GetUserById(request.UserId);
 
-            var prod = CalculateProducstDiscount(product, user);
+            CalculateProducstDiscount(product, user);
 
-            return prod;
+            return product.ParseToProductModel();
         }
 
-        private ProductModel CalculateProducstDiscount(Product product, User user)
+        private Product CalculateProducstDiscount(Product product, User user)
         {
             try
             {
@@ -51,15 +51,14 @@ namespace HASH.DiscountCalculator.Services
                     throw new ArgumentNullException(nameof(user.BirthDate));
 
                 product.CheckBirthDayDiscount(user.BirthDate);
-                product.CheckBlackFridayDiscount();
-                product.CheckDiscountLimit();
+                product.CheckBlackFridayDiscount(DateTime.Now.Date);
             }
             catch (Exception)
             {
                 ResetDiscounts(product);
             }
             
-            return product.ParseToProductModel();
+            return product;
         }
 
         private Product ResetDiscounts(Product product)
@@ -70,7 +69,7 @@ namespace HASH.DiscountCalculator.Services
             return product;
         }
 
-        private async Task<Product> GetProductById(string productId)
+        public async Task<Product> GetProductById(string productId)
         {
             var product = await _productRepository.GetProductById(productId);
 
@@ -80,7 +79,7 @@ namespace HASH.DiscountCalculator.Services
             return product;
         }
 
-        private async Task<User> GetUserById(string userId)
+        public async Task<User> GetUserById(string userId)
         {
             var user = await _userRepository.GetUserById(userId);
 
@@ -89,6 +88,5 @@ namespace HASH.DiscountCalculator.Services
 
             return user;
         }
-        
     }
 }
