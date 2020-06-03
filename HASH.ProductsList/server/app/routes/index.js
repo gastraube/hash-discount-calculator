@@ -4,4 +4,7 @@ module.exports  = function(app) {
             
     app.route('/product')
         .post(api.product);
+
+    app.route('/products')
+        .get(api.products);
 };

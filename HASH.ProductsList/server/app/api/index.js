@@ -1,29 +1,41 @@
 
-var PROTO_PATH = __dirname + '/discount.proto';
+var api = {}
 
+var protoPath = __dirname + '/discount.proto';
 var grpc = require('grpc');
 var protoLoader = require('@grpc/proto-loader');
+var serverPort = 'localhost:50051'
 
 var packageDefinition = protoLoader.loadSync(
-    PROTO_PATH,
+    protoPath,
     {keepCase: true,
      longs: String,
      enums: String,
      defaults: true,
      oneofs: true
     });
+
 var discount_proto = grpc.loadPackageDefinition(packageDefinition);
-
-
-var api = {}
+var client = new discount_proto.Discount(serverPort, grpc.credentials.createInsecure());
 
 api.product = function(req, res) {
-    var client = new discount_proto.Discount('localhost:50051',
-    grpc.credentials.createInsecure());
-
     client.CalculateDiscount(req.body, function(err, response) {
         res.status(200).json(response);
     });
+ };
+
+ api.products = function(req, res) {
+    var call = client.GetAllProducts(null);
+
+    var products =[];
+
+    call.on('data',function(response){
+        products.push(response)
+      });
+    
+    call.on('end',function(){
+        res.status(200).json(products);
+    });      
  };
 
 module.exports = api;

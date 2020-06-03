@@ -17,4 +17,9 @@ class ProductsList {
         this._products = [];        
     }
     
+    
+    addProductsList(products) {
+        
+        return this._products = this._products.concat(products);
+    }
 }

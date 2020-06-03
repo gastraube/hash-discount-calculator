@@ -32,6 +32,7 @@ namespace HASH.DiscountCalculator.Services
 
             foreach (var product in products)
             {
+                await Task.Delay(1000);
                 var productModel = product.ParseToProductModel();
                 await responseStream.WriteAsync(productModel);
             }
