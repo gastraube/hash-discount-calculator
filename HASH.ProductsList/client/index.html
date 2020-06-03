@@ -3,24 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>Produtos</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/style.css">
     
 </head>
-<body class="container">
-    
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <img src="img/logo_menu.png" width="112px" height="33" class="d-inline-block align-top" alt="">
+      </nav>
+
     <h1 class="text-center">Products</h1>
     
     <div class="text-center">
-        <button onclick="productController.getCalculatedProductDiscount();" class="btn btn-primary text-center" type="button">
+        <button onclick="productController.getCalculatedProductDiscount();" class="btn btn-dark text-center" type="button">
             Calculate Discounts
         </button>
     </div> 
     <br>
 
     <div id="messageView"></div>      
-    <div id="productsView"></div>
-    
+       
+    <div class="card">
+        <div id="productsView" class="card-body">
+            <div class="load">Loading...</div>
+        </div>
+    </div>
+       
     <script src="js/app/models/ProductsList.js"></script>
     <script src="js/app/models/Product.js"></script>
     <script src="js/app/models/Discount.js"></script>

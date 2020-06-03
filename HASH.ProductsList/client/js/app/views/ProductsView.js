@@ -9,8 +9,7 @@ class ProductsView extends View {
         return `
         <table class="table table-hover table-bordered">
         <thead>
-            <tr>
-                <th onclick="">User Name</th>
+            <tr>         
                 <th onclick="">Product Id</th>
                 <th onclick="">Price In Cents</th>
                 <th onclick="">Title</th>
@@ -23,8 +22,7 @@ class ProductsView extends View {
             <tbody>
                 ${model.products.map(p => `
                     
-                    <tr>
-                        <td>UserName</td>
+                    <tr>                        
                         <td>${p.id}</td>
                         <td>${p.price_in_cents}</td>
                         <td>${p.title}</td>
