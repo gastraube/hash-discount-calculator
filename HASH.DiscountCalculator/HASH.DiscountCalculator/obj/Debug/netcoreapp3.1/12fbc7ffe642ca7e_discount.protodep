@@ -1,2 +1,0 @@
-obj\Debug\netcoreapp3.1/Discount.cs \
-obj\Debug\netcoreapp3.1/DiscountGrpc.cs: Protos/discount.proto
