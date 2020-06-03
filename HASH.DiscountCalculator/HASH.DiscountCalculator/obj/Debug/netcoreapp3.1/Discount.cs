@@ -25,18 +25,20 @@ namespace HASH.DiscountCalculator {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChVQcm90b3MvZGlzY291bnQucHJvdG8iNwoSUHJvZHVjdExvb2tVcE1vZGVs",
-            "Eg4KBnVzZXJJZBgBIAEoCRIRCglwcm9kdWN0SWQYAiABKAkieAoMUHJvZHVj",
-            "dE1vZGVsEgoKAmlkGAEgASgJEhYKDnByaWNlX2luX2NlbnRzGAIgASgFEg0K",
-            "BXRpdGxlGAMgASgJEhMKC2Rlc2NyaXB0aW9uGAQgASgJEiAKCGRpc2NvdW50",
-            "GAUgASgLMg4uRGlzY291bnRNb2RlbCI0Cg1EaXNjb3VudE1vZGVsEgsKA3Bj",
-            "dBgBIAEoAhIWCg52YWx1ZV9pbl9jZW50cxgCIAEoBTJDCghEaXNjb3VudBI3",
-            "ChFDYWxjdWxhdGVEaXNjb3VudBITLlByb2R1Y3RMb29rVXBNb2RlbBoNLlBy",
-            "b2R1Y3RNb2RlbEIaqgIXSEFTSC5EaXNjb3VudENhbGN1bGF0b3JiBnByb3Rv",
-            "Mw=="));
+            "Eg4KBnVzZXJJZBgBIAEoCRIRCglwcm9kdWN0SWQYAiABKAkiEQoPUHJvZHVj",
+            "dHNSZXF1ZXN0IngKDFByb2R1Y3RNb2RlbBIKCgJpZBgBIAEoCRIWCg5wcmlj",
+            "ZV9pbl9jZW50cxgCIAEoBRINCgV0aXRsZRgDIAEoCRITCgtkZXNjcmlwdGlv",
+            "bhgEIAEoCRIgCghkaXNjb3VudBgFIAEoCzIOLkRpc2NvdW50TW9kZWwiNAoN",
+            "RGlzY291bnRNb2RlbBILCgNwY3QYASABKAISFgoOdmFsdWVfaW5fY2VudHMY",
+            "AiABKAUyeAoIRGlzY291bnQSNwoRQ2FsY3VsYXRlRGlzY291bnQSEy5Qcm9k",
+            "dWN0TG9va1VwTW9kZWwaDS5Qcm9kdWN0TW9kZWwSMwoOR2V0QWxsUHJvZHVj",
+            "dHMSEC5Qcm9kdWN0c1JlcXVlc3QaDS5Qcm9kdWN0TW9kZWwwAUIaqgIXSEFT",
+            "SC5EaXNjb3VudENhbGN1bGF0b3JiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::HASH.DiscountCalculator.ProductLookUpModel), global::HASH.DiscountCalculator.ProductLookUpModel.Parser, new[]{ "UserId", "ProductId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::HASH.DiscountCalculator.ProductsRequest), global::HASH.DiscountCalculator.ProductsRequest.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::HASH.DiscountCalculator.ProductModel), global::HASH.DiscountCalculator.ProductModel.Parser, new[]{ "Id", "PriceInCents", "Title", "Description", "Discount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::HASH.DiscountCalculator.DiscountModel), global::HASH.DiscountCalculator.DiscountModel.Parser, new[]{ "Pct", "ValueInCents" }, null, null, null, null)
           }));
@@ -202,6 +204,107 @@ namespace HASH.DiscountCalculator {
 
   }
 
+  public sealed partial class ProductsRequest : pb::IMessage<ProductsRequest> {
+    private static readonly pb::MessageParser<ProductsRequest> _parser = new pb::MessageParser<ProductsRequest>(() => new ProductsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ProductsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::HASH.DiscountCalculator.DiscountReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProductsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProductsRequest(ProductsRequest other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ProductsRequest Clone() {
+      return new ProductsRequest(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ProductsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ProductsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ProductsRequest other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    }
+
+  }
+
   public sealed partial class ProductModel : pb::IMessage<ProductModel> {
     private static readonly pb::MessageParser<ProductModel> _parser = new pb::MessageParser<ProductModel>(() => new ProductModel());
     private pb::UnknownFieldSet _unknownFields;
@@ -210,7 +313,7 @@ namespace HASH.DiscountCalculator {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::HASH.DiscountCalculator.DiscountReflection.Descriptor.MessageTypes[1]; }
+      get { return global::HASH.DiscountCalculator.DiscountReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -457,7 +560,7 @@ namespace HASH.DiscountCalculator {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::HASH.DiscountCalculator.DiscountReflection.Descriptor.MessageTypes[2]; }
+      get { return global::HASH.DiscountCalculator.DiscountReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -9,5 +9,6 @@ namespace HASH.DiscountCalculator.Repositories
     public interface IUserRepository
     {
         Task<User> GetUserById(string userId);
+        Task<List<User>> GetAllUsers();
     }
 }

@@ -16,7 +16,7 @@ namespace HASH.DiscountCalculator.Tests.Services
         public async Task CalculateDiscountNullRequestArgumentNullException()
         {
             var productRepository = new ProductRepository(null);
-            var userRepository = new UserRepository();
+            var userRepository = new UserRepository(null);
             var service = new DiscountService(productRepository, userRepository);
 
             await Assert.ThrowsAsync<ArgumentNullException>(() => service.CalculateDiscount(null, null));
@@ -26,7 +26,7 @@ namespace HASH.DiscountCalculator.Tests.Services
         public async Task CalculateDiscountNullRequestProductIdArgumentNullException()
         {
             var productRepository = new ProductRepository(null);
-            var userRepository = new UserRepository();
+            var userRepository = new UserRepository(null);
             var service = new DiscountService(productRepository, userRepository);
             var request = new ProductLookUpModel();
             request.ProductId = "";
@@ -39,7 +39,7 @@ namespace HASH.DiscountCalculator.Tests.Services
         public async Task CalculateDiscountNullRequestUserIdArgumentNullException()
         {
             var productRepository = new ProductRepository(null);
-            var userRepository = new UserRepository();
+            var userRepository = new UserRepository(null);
             var service = new DiscountService(productRepository, userRepository);
             var request = new ProductLookUpModel();
             request.ProductId = "1";
@@ -52,7 +52,7 @@ namespace HASH.DiscountCalculator.Tests.Services
         public async Task CalculateDiscountProductCannotBeNull()
         {
             var productRepository = new ProductRepository(null);
-            var userRepository = new UserRepository();
+            var userRepository = new UserRepository(null);
             var service = new DiscountService(productRepository, userRepository);
             var request = new ProductLookUpModel();
             request.ProductId = "1";
@@ -72,7 +72,7 @@ namespace HASH.DiscountCalculator.Tests.Services
             mock.Setup(u => u.GetProductById(It.IsAny<string>()))
                 .Returns(Task.FromResult<Product>(null));
 
-            var userRepository = new UserRepository();
+            var userRepository = new UserRepository(null);
             var service = new DiscountService(mock.Object, userRepository);
             var request = new ProductLookUpModel();
             request.ProductId = "1";

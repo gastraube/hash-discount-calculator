@@ -21,6 +21,22 @@ namespace HASH.DiscountCalculator.Services
             _userRepository = userRepository;
         }
 
+        public override async Task GetAllProducts(ProductsRequest request,
+            IServerStreamWriter<ProductModel> responseStream,
+            ServerCallContext context)
+        {
+            if (request == null)
+                throw new ArgumentNullException(nameof(request));
+
+            var products = await GetAllProducts();
+
+            foreach (var product in products)
+            {
+                var productModel = product.ParseToProductModel();
+                await responseStream.WriteAsync(productModel);
+            }
+        }
+
         public override async Task<ProductModel> CalculateDiscount(ProductLookUpModel request, ServerCallContext context)
         {
 
@@ -86,6 +102,26 @@ namespace HASH.DiscountCalculator.Services
                 throw new ArgumentNullException($"User with id: {user} not found");
 
             return user;
+        }
+
+        public async Task<List<Product>> GetAllProducts()
+        {
+            var products = await _productRepository.GetAllProducts();
+
+            if (products.Count == 0)
+                throw new ArgumentNullException($"No products found");
+
+            return products;
+        }
+
+        public async Task<List<User>> GetAllUsers()
+        {
+            var users = await _userRepository.GetAllUsers();
+
+            if (users.Count == 0)
+                throw new ArgumentNullException($"No users found");
+
+            return users;
         }
     }
 }
