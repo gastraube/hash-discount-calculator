@@ -1,5 +1,5 @@
 class ProductController{
-
+        
         constructor() {
                       
             let $ = document.querySelector.bind(document);           
@@ -31,11 +31,14 @@ class ProductController{
         }
 
         _getCalculatedProductDiscount(){
+            let $ = document.querySelector.bind(document);           
+
+            var userId = $("#users").value;
 
             this._productsList.products.forEach(product => { 
 
                 this._productsService
-                    .calculateProductDiscount(product.id, '5ed704bc6b98434760615023')
+                    .calculateProductDiscount(product.id, userId)
                     .then(product => {
 
                         let updatedItem =  this._productsList.products.find((p) => { return p.id === product.id })
@@ -80,8 +83,11 @@ class ProductController{
                 .then(users => {
                     
                     users.forEach(user => {   
-                        var option = document.createElement("option");                              
-                        option.text = `${user.first_name} ${user.last_name}`;
+                        var option = document.createElement("option");  
+                        
+                        var date = new Date(user.date_of_birth)
+
+                        option.text = `${user.first_name} ${user.last_name} - Birth Date: ${date.toLocaleDateString("pt-Br")}`;
                         option.value = user.id;
                         usersList.add(option);
                     })
