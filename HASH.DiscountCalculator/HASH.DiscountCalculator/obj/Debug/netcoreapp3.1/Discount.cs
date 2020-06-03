@@ -24,23 +24,24 @@ namespace HASH.DiscountCalculator {
     static DiscountReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVQcm90b3MvZGlzY291bnQucHJvdG8iNwoSUHJvZHVjdExvb2tVcE1vZGVs",
-            "Eg4KBnVzZXJJZBgBIAEoCRIRCglwcm9kdWN0SWQYAiABKAkiEQoPUHJvZHVj",
-            "dHNSZXF1ZXN0Ig4KDFVzZXJzUmVxdWVzdCJVCglVc2VyTW9kZWwSCgoCaWQY",
-            "ASABKAkSEgoKZmlyc3RfbmFtZRgCIAEoCRIRCglsYXN0X25hbWUYAyABKAkS",
-            "FQoNZGF0ZV9vZl9iaXJ0aBgEIAEoCSJ4CgxQcm9kdWN0TW9kZWwSCgoCaWQY",
-            "ASABKAkSFgoOcHJpY2VfaW5fY2VudHMYAiABKAUSDQoFdGl0bGUYAyABKAkS",
-            "EwoLZGVzY3JpcHRpb24YBCABKAkSIAoIZGlzY291bnQYBSABKAsyDi5EaXNj",
-            "b3VudE1vZGVsIjQKDURpc2NvdW50TW9kZWwSCwoDcGN0GAEgASgCEhYKDnZh",
-            "bHVlX2luX2NlbnRzGAIgASgFMqQBCghEaXNjb3VudBI3ChFDYWxjdWxhdGVE",
-            "aXNjb3VudBITLlByb2R1Y3RMb29rVXBNb2RlbBoNLlByb2R1Y3RNb2RlbBIz",
-            "Cg5HZXRBbGxQcm9kdWN0cxIQLlByb2R1Y3RzUmVxdWVzdBoNLlByb2R1Y3RN",
-            "b2RlbDABEioKC0dldEFsbFVzZXJzEg0uVXNlcnNSZXF1ZXN0GgouVXNlck1v",
-            "ZGVsMAFCGqoCF0hBU0guRGlzY291bnRDYWxjdWxhdG9yYgZwcm90bzM="));
+            "ChVQcm90b3MvZGlzY291bnQucHJvdG8iSgoSUHJvZHVjdExvb2tVcE1vZGVs",
+            "Eg4KBnVzZXJJZBgBIAEoCRIRCglwcm9kdWN0SWQYAiABKAkSEQoJdG9kYXlE",
+            "YXRlGAMgASgJIhEKD1Byb2R1Y3RzUmVxdWVzdCIOCgxVc2Vyc1JlcXVlc3Qi",
+            "VQoJVXNlck1vZGVsEgoKAmlkGAEgASgJEhIKCmZpcnN0X25hbWUYAiABKAkS",
+            "EQoJbGFzdF9uYW1lGAMgASgJEhUKDWRhdGVfb2ZfYmlydGgYBCABKAkieAoM",
+            "UHJvZHVjdE1vZGVsEgoKAmlkGAEgASgJEhYKDnByaWNlX2luX2NlbnRzGAIg",
+            "ASgFEg0KBXRpdGxlGAMgASgJEhMKC2Rlc2NyaXB0aW9uGAQgASgJEiAKCGRp",
+            "c2NvdW50GAUgASgLMg4uRGlzY291bnRNb2RlbCI0Cg1EaXNjb3VudE1vZGVs",
+            "EgsKA3BjdBgBIAEoAhIWCg52YWx1ZV9pbl9jZW50cxgCIAEoBTKkAQoIRGlz",
+            "Y291bnQSNwoRQ2FsY3VsYXRlRGlzY291bnQSEy5Qcm9kdWN0TG9va1VwTW9k",
+            "ZWwaDS5Qcm9kdWN0TW9kZWwSMwoOR2V0QWxsUHJvZHVjdHMSEC5Qcm9kdWN0",
+            "c1JlcXVlc3QaDS5Qcm9kdWN0TW9kZWwwARIqCgtHZXRBbGxVc2VycxINLlVz",
+            "ZXJzUmVxdWVzdBoKLlVzZXJNb2RlbDABQhqqAhdIQVNILkRpc2NvdW50Q2Fs",
+            "Y3VsYXRvcmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::HASH.DiscountCalculator.ProductLookUpModel), global::HASH.DiscountCalculator.ProductLookUpModel.Parser, new[]{ "UserId", "ProductId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::HASH.DiscountCalculator.ProductLookUpModel), global::HASH.DiscountCalculator.ProductLookUpModel.Parser, new[]{ "UserId", "ProductId", "TodayDate" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::HASH.DiscountCalculator.ProductsRequest), global::HASH.DiscountCalculator.ProductsRequest.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::HASH.DiscountCalculator.UsersRequest), global::HASH.DiscountCalculator.UsersRequest.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::HASH.DiscountCalculator.UserModel), global::HASH.DiscountCalculator.UserModel.Parser, new[]{ "Id", "FirstName", "LastName", "DateOfBirth" }, null, null, null, null),
@@ -79,6 +80,7 @@ namespace HASH.DiscountCalculator {
     public ProductLookUpModel(ProductLookUpModel other) : this() {
       userId_ = other.userId_;
       productId_ = other.productId_;
+      todayDate_ = other.todayDate_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -109,6 +111,17 @@ namespace HASH.DiscountCalculator {
       }
     }
 
+    /// <summary>Field number for the "todayDate" field.</summary>
+    public const int TodayDateFieldNumber = 3;
+    private string todayDate_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string TodayDate {
+      get { return todayDate_; }
+      set {
+        todayDate_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ProductLookUpModel);
@@ -124,6 +137,7 @@ namespace HASH.DiscountCalculator {
       }
       if (UserId != other.UserId) return false;
       if (ProductId != other.ProductId) return false;
+      if (TodayDate != other.TodayDate) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,6 +146,7 @@ namespace HASH.DiscountCalculator {
       int hash = 1;
       if (UserId.Length != 0) hash ^= UserId.GetHashCode();
       if (ProductId.Length != 0) hash ^= ProductId.GetHashCode();
+      if (TodayDate.Length != 0) hash ^= TodayDate.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -153,6 +168,10 @@ namespace HASH.DiscountCalculator {
         output.WriteRawTag(18);
         output.WriteString(ProductId);
       }
+      if (TodayDate.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(TodayDate);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -166,6 +185,9 @@ namespace HASH.DiscountCalculator {
       }
       if (ProductId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ProductId);
+      }
+      if (TodayDate.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TodayDate);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -184,6 +206,9 @@ namespace HASH.DiscountCalculator {
       if (other.ProductId.Length != 0) {
         ProductId = other.ProductId;
       }
+      if (other.TodayDate.Length != 0) {
+        TodayDate = other.TodayDate;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -201,6 +226,10 @@ namespace HASH.DiscountCalculator {
           }
           case 18: {
             ProductId = input.ReadString();
+            break;
+          }
+          case 26: {
+            TodayDate = input.ReadString();
             break;
           }
         }

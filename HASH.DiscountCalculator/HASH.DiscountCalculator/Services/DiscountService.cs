@@ -57,7 +57,7 @@ namespace HASH.DiscountCalculator.Services
 
         public override async Task<ProductModel> CalculateDiscount(ProductLookUpModel request, ServerCallContext context)
         {
-
+        
             if (request == null)
                 throw new ArgumentNullException(nameof(request));
 
@@ -67,24 +67,30 @@ namespace HASH.DiscountCalculator.Services
             if (string.IsNullOrEmpty(request.UserId))
                 throw new ArgumentNullException(nameof(request.UserId));
 
+            if (string.IsNullOrEmpty(request.TodayDate))
+                throw new ArgumentNullException(nameof(request.TodayDate));
 
             var product = await GetProductById(request.ProductId);
             var user = await GetUserById(request.UserId);
+            var todayDate = DateTime.Parse(request.TodayDate);
 
-            CalculateProducstDiscount(product, user);
+            if (todayDate == DateTime.MinValue)
+                throw new ArgumentNullException(nameof(request));
+
+            CalculateProducstDiscount(product, user, todayDate);
 
             return product.ParseToProductModel();
         }
 
-        private Product CalculateProducstDiscount(Product product, User user)
+        private Product CalculateProducstDiscount(Product product, User user, DateTime todayDate)
         {
             try
             {
                 if (user.BirthDate == null)
                     throw new ArgumentNullException(nameof(user.BirthDate));
 
-                product.CheckBirthDayDiscount(user.BirthDate);
-                product.CheckBlackFridayDiscount(DateTime.Now.Date);
+                product.CheckBirthDayDiscount(user.BirthDate, todayDate.Date);
+                product.CheckBlackFridayDiscount(todayDate.Date);
             }
             catch (Exception)
             {

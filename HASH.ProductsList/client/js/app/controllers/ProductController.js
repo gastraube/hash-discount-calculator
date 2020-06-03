@@ -12,9 +12,7 @@ class ProductController{
             this._getUsers();
 
             this._messageView = new MessageView($('#messageView'));   
-            this._message = new Message();
-                        
-       
+            this._message = new Message();                               
         }
         
         _setTodayDate(){
@@ -34,11 +32,12 @@ class ProductController{
             let $ = document.querySelector.bind(document);           
 
             var userId = $("#users").value;
+            var todayDate = $("#today-date").value;
 
             this._productsList.products.forEach(product => { 
 
                 this._productsService
-                    .calculateProductDiscount(product.id, userId)
+                    .calculateProductDiscount(product.id, userId, todayDate)
                     .then(product => {
 
                         let updatedItem =  this._productsList.products.find((p) => { return p.id === product.id })

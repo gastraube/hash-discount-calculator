@@ -39,7 +39,6 @@ api.product = function(req, res) {
  };
 
  api.users = function(req, res) {
-     console.log(`teste`);
     var call = client.GetAllUsers(null);
 
     var users =[];

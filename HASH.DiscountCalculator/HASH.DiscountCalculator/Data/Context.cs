@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HASH.DiscountCalculator.Data
 {
-    public class Context
+    public class Context : IContext
     {
         private readonly IMongoDatabase database;
 

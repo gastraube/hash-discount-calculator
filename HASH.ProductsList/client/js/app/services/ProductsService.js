@@ -3,11 +3,12 @@ class ProductsService {
         this._http = new HttpService();
     }
 
-   calculateProductDiscount(productId, userId){
+   calculateProductDiscount(productId, userId, todayDate){
 
         var productLookUpModel = {
             userId : userId,
-            productId : productId
+            productId : productId,
+            todayDate : todayDate
         };
 
         return new Promise((resolve, reject) => {

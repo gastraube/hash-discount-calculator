@@ -11,6 +11,7 @@ service Discount {
 message ProductLookUpModel {
   string userId = 1;
   string productId = 2;
+  string todayDate = 3;
 }
 
 message ProductsRequest{

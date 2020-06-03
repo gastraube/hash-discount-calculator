@@ -21,11 +21,11 @@ namespace HASH.DiscountCalculator.Models
         public string Description { get; set; }
         public Discount Discount { get; set; }
 
-        public void CheckBirthDayDiscount(DateTime userBirthDay)
+        public void CheckBirthDayDiscount(DateTime userBirthDay, DateTime now)
         {
-            if (userBirthDay.Date == DateTime.Now.Date) {
-                Discount.Percentage = 0.05F;
-                Discount.ValueCents = (int)(PriceCents * Discount.Percentage);              
+            if (userBirthDay.Day == now.Day && userBirthDay.Month == now.Month) {
+                Discount.Percentage += 0.05F;
+                Discount.ValueCents += (int)(PriceCents * Discount.Percentage);              
             }
 
             CheckDiscountLimit();
@@ -35,8 +35,8 @@ namespace HASH.DiscountCalculator.Models
         {
             if (now.Day == Dates.BlackFridayDay && now.Month == Dates.BlackFridayMonth)
             {
-                Discount.Percentage = 0.1F;
-                Discount.ValueCents = (int)(PriceCents * Discount.Percentage);
+                Discount.Percentage += 0.1F;
+                Discount.ValueCents += (int)(PriceCents * Discount.Percentage);
             }
 
             CheckDiscountLimit();

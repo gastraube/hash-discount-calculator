@@ -22,7 +22,7 @@ namespace HASH.DiscountCalculator.Tests.Services
         {
             var product = new Product();
             product.PriceCents = 1000;
-            product.CheckBirthDayDiscount(DateTime.Now.Date);
+            product.CheckBirthDayDiscount(DateTime.Now.Date, DateTime.Now.Date);
 
             Assert.NotEqual(0, product.Discount.ValueCents);
             Assert.NotEqual(0, product.Discount.Percentage);

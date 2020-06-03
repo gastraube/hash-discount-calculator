@@ -65,4 +65,3 @@ C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculato
 C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculator\bin\Debug\netcoreapp3.1\MongoDB.Driver.Core.dll
 C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculator\bin\Debug\netcoreapp3.1\MongoDB.Libmongocrypt.dll
 C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculator\bin\Debug\netcoreapp3.1\SharpCompress.dll
-C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculator\obj\Debug\netcoreapp3.1\HASH.DiscountCalculator.csprojAssemblyReference.cache

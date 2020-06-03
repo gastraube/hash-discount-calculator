@@ -10,9 +10,9 @@ namespace HASH.DiscountCalculator.Repositories
 {
     public class ProductRepository : IProductRepository
     {
-        private readonly Context _context;
+        private readonly IContext _context;
 
-        public ProductRepository(Context context)
+        public ProductRepository(IContext context)
         {
             _context = context;
         }
