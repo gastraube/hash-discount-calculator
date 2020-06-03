@@ -1,10 +1,11 @@
+var PORT = process.env.GRPC_PORT || 50051 
 
 var api = {}
 
 var protoPath = __dirname + '/discount.proto';
 var grpc = require('grpc');
 var protoLoader = require('@grpc/proto-loader');
-var serverPort = 'localhost:50051'
+var serverPort = 'localhost:' + PORT
 
 var packageDefinition = protoLoader.loadSync(
     protoPath,
