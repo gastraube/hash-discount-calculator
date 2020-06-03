@@ -1,0 +1,46 @@
+{
+	"result": {
+		"ok": 1,
+		"n": 5
+	},
+	"ops": [
+		{
+			"Description": "Copo Plástico, vermelho, 200ml.",
+			"PriceCents": 10,
+			"Title": "Copo Plástico",
+			"_id": "5ed702b26b9843476061501e"
+		},
+		{
+			"Description": "iPhone 11 Pro Max novo na caixa.",
+			"PriceCents": 1000,
+			"Title": "iPhone 11",
+			"_id": "5ed702b26b9843476061501f"
+		},
+		{
+			"Description": "Relógio de pulso, preto.",
+			"PriceCents": 150,
+			"Title": "Relógio",
+			"_id": "5ed702b26b98434760615020"
+		},
+		{
+			"Description": "Monitor LED 30 polegadas.",
+			"PriceCents": 3000,
+			"Title": "Monitor LED",
+			"_id": "5ed702b26b98434760615021"
+		},
+		{
+			"Description": "Tênis de corrida, preto, Nike.",
+			"PriceCents": 570,
+			"Title": "Tênis de Corrida",
+			"_id": "5ed702b26b98434760615022"
+		}
+	],
+	"insertedCount": 5,
+	"insertedIds": {
+		"0": "5ed702b26b9843476061501e",
+		"1": "5ed702b26b9843476061501f",
+		"2": "5ed702b26b98434760615020",
+		"3": "5ed702b26b98434760615021",
+		"4": "5ed702b26b98434760615022"
+	}
+}

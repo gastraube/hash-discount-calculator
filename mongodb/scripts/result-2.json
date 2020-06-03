@@ -1,0 +1,32 @@
+{
+	"result": {
+		"ok": 1,
+		"n": 3
+	},
+	"ops": [
+		{
+			"FirstName": "Joao",
+			"LastName": "Carlos",
+			"BirthDate": "1993-06-18T00:00:00.000Z",
+			"_id": "5ed704bc6b98434760615023"
+		},
+		{
+			"FirstName": "Ana",
+			"LastName": "Claudia",
+			"BirthDate": "1989-11-25T00:00:00.000Z",
+			"_id": "5ed704bc6b98434760615024"
+		},
+		{
+			"FirstName": "Maria",
+			"LastName": "Luiza",
+			"BirthDate": "1997-01-15T00:00:00.000Z",
+			"_id": "5ed704bc6b98434760615025"
+		}
+	],
+	"insertedCount": 3,
+	"insertedIds": {
+		"0": "5ed704bc6b98434760615023",
+		"1": "5ed704bc6b98434760615024",
+		"2": "5ed704bc6b98434760615025"
+	}
+}
