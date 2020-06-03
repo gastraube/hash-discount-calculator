@@ -7,6 +7,7 @@ using Grpc.Core;
 using HASH.DiscountCalculator.Repositories;
 using HASH.DiscountCalculator.Services;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
@@ -16,7 +17,9 @@ namespace HASH.DiscountCalculator
     {
         public static void Main(string[] args)
         {
-            const int Port = 50051;
+
+            var configuration = new ConfigurationBuilder().AddEnvironmentVariables().Build();
+            var Port = int.Parse(configuration.GetValue<string>("GRPC_PORT") ?? "50051");
 
             var productRepository = new ProductRepository(new Data.Context());
             var userRepository = new UserRepository(new Data.Context());           
