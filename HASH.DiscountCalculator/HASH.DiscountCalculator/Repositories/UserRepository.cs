@@ -1,4 +1,6 @@
-﻿using HASH.DiscountCalculator.Models;
+﻿using HASH.DiscountCalculator.Data;
+using HASH.DiscountCalculator.Models;
+using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,36 +10,21 @@ namespace HASH.DiscountCalculator.Repositories
 {
     public class UserRepository : IUserRepository
     {
-        private List<User> userList = new List<User>() {
-            new User()
-            {
-                Id = "1",
-                FirstName = "Joao",
-                LastName = "Carlos",
-                BirthDate = new DateTime(1993, 6, 18)
-            },
-            new User()
-            {
-                Id = "2",
-                FirstName = "Ana",
-                LastName = "Claudia",
-                BirthDate = new DateTime(1989, 11, 25)
-            },
-            new User()
-            {
-                Id = "3",
-                FirstName = "Maria",
-                LastName = "Luiza'",
-                BirthDate = DateTime.Now
-            }
-        };
+        private readonly Context _context;
 
-
-        public Task<User> GetUserById(string userId)
+        public UserRepository(Context context)
         {
-            return Task.FromResult(
-                userList.Where(user => user.Id == userId).FirstOrDefault()
-            );
+            _context = context;
+        }
+
+        public async Task<User> GetUserById(string userId)
+        {
+            return await _context.Users.Find(p => p.Id == userId).FirstOrDefaultAsync(); ;
+        }
+
+        public async Task<List<User>> GetAllUsers()
+        {  
+            return await _context.Users.Find(_ => true).ToListAsync();
         }
     }
 }

@@ -1,7 +1,7 @@
 class ProductsView extends View {
     
-    constructor(elemento) {
-        super(elemento);
+    constructor(element) {
+        super(element);
     }
     
     template(model) {

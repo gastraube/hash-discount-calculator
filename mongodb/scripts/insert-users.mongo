@@ -1,0 +1,18 @@
+db.Users.insertMany([
+    {                  
+        FirstName : "Joao",
+        LastName : "Carlos",
+        BirthDate: ISODate('1993-06-18')
+    },
+    {
+        FirstName : "Ana",
+        LastName : "Claudia",
+        BirthDate: ISODate('1989-11-25')
+    }
+    ,
+    {
+         FirstName : "Maria",
+        LastName : "Luiza",
+        BirthDate: ISODate('1997-01-15')
+    }
+])

@@ -14,14 +14,14 @@ class ProductsService {
 
             this._http
             .get('/product', productLookUpModel)
-            .then(objeto => 
+            .then(product => 
                 {
-                    resolve(new Product(objeto.id, objeto.price_in_cents, objeto.title, objeto.description, objeto.discount))
+                    resolve(new Product(product.id, product.price_in_cents, product.title, product.description, product.discount))
                 }
             )
-            .catch(erro => {
-                console.log(erro)
-                reject("It wasn't possible to get the product discount.")
+            .catch(error => {
+                console.log(error)
+                reject(`It wasn't possible to get the product with Id ${productId}, discount.`)
             });
             
         });

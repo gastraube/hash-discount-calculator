@@ -18,8 +18,8 @@ namespace HASH.DiscountCalculator
         {
             const int Port = 50051;
 
-            var productRepository = new ProductRepository();
-            var userRepository = new UserRepository();           
+            var productRepository = new ProductRepository(new Data.Context());
+            var userRepository = new UserRepository(new Data.Context());           
 
             Server server = new Server
             {

@@ -12,7 +12,6 @@ namespace HASH.DiscountCalculator.Services
 {
     public class DiscountService : Discount.DiscountBase
     {
-        private readonly ILogger<DiscountService> _logger;
         private readonly IProductRepository _productRepository;
         private readonly IUserRepository _userRepository;
 

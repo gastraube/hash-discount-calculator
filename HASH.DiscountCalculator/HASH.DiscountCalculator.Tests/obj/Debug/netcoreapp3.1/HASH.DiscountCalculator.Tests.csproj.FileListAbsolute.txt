@@ -116,3 +116,9 @@ C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculato
 C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculator.Tests\bin\Debug\netcoreapp3.1\Castle.Core.dll
 C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculator.Tests\bin\Debug\netcoreapp3.1\Moq.dll
 C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculator.Tests\obj\Debug\netcoreapp3.1\HASH.DiscountCalculator.Tests.csproj.CoreCompileInputs.cache
+C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculator.Tests\bin\Debug\netcoreapp3.1\DnsClient.dll
+C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculator.Tests\bin\Debug\netcoreapp3.1\MongoDB.Bson.dll
+C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculator.Tests\bin\Debug\netcoreapp3.1\MongoDB.Driver.dll
+C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculator.Tests\bin\Debug\netcoreapp3.1\MongoDB.Driver.Core.dll
+C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculator.Tests\bin\Debug\netcoreapp3.1\MongoDB.Libmongocrypt.dll
+C:\Repos\hash-discount-calculator\HASH.DiscountCalculator\HASH.DiscountCalculator.Tests\bin\Debug\netcoreapp3.1\SharpCompress.dll

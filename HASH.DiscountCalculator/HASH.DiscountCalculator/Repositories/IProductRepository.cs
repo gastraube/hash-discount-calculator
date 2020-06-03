@@ -9,5 +9,6 @@ namespace HASH.DiscountCalculator.Repositories
     public interface IProductRepository
     {
         Task<Product> GetProductById(string productId);
+        Task<List<Product>> GetAllProducts();
     }
 }
