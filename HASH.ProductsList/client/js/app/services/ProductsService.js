@@ -21,7 +21,7 @@ class ProductsService {
             )
             .catch(error => {
                 console.log(error)
-                reject(`It wasn't possible to get the product with Id ${productId}, discount.`)
+                reject(`It wasn't possible to calculate one or more Products discount.`)
             });
             
         });

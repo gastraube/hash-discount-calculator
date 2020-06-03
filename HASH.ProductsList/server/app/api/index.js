@@ -38,4 +38,19 @@ api.product = function(req, res) {
     });      
  };
 
+ api.users = function(req, res) {
+     console.log(`teste`);
+    var call = client.GetAllUsers(null);
+
+    var users =[];
+
+    call.on('data',function(response){
+        users.push(response)
+      });
+    
+    call.on('end',function(){
+        res.status(200).json(users);
+    });      
+ };
+
 module.exports = api;

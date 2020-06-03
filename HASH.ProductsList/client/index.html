@@ -2,7 +2,8 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Produtos</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <title>Hash - Product Discount Simulator</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-reboot.css">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-grid.css">
@@ -14,23 +15,51 @@
         <img src="img/logo_menu.png" width="112px" height="33" class="d-inline-block align-top" alt="">
       </nav>
 
-    <h1 class="text-center">Products</h1>
+    <h2 class="title">Product Discount Simulator</h2>
     
     <div class="text-center">
-        <button onclick="productController.getCalculatedProductDiscount();" class="btn btn-dark text-center" type="button">
-            Calculate Discounts
+        <button onclick="productController._getCalculatedProductDiscount();" class="btn btn-dark text-center" type="button">
+            Simulate Discounts
         </button>
     </div> 
     <br>
 
-    <div id="messageView"></div>      
-       
     <div class="card">
-        <div id="productsView" class="card-body">
-            <div class="load">Loading...</div>
+    
+        <div class="card-body">
+            <h5 class="card-title">User Setup</h5>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <label class="input-group-text" for="inputGroupSelect01">Select User</label>
+                </div>
+                <select class="custom-select" id="users">                  
+  
+                </select>
+              </div>
+
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Today Date</span>
+                </div>
+                <input id="today-date" type="date" class="form-control">
+              </div>
         </div>
     </div>
-       
+    <br/>
+    <div class="card">            
+        <div class="card-body">
+            <h5 class="card-title">Products</h5>
+            <div id="messageView" class="card-body">            
+            </div>  
+            <div id="productsView" >
+                <div class="load">Loading...</div>
+            </div>
+        </div>           
+    </div>
+
+    <script src="js/app/services/UsersService.js"></script>
+    <script src="js/app/models/User.js"></script>
+    <script src="js/app/models/UsersList.js"></script>
     <script src="js/app/models/ProductsList.js"></script>
     <script src="js/app/models/Product.js"></script>
     <script src="js/app/models/Discount.js"></script>

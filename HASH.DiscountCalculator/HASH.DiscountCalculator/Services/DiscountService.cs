@@ -38,6 +38,23 @@ namespace HASH.DiscountCalculator.Services
             }
         }
 
+        public override async Task GetAllUsers(UsersRequest request,
+         IServerStreamWriter<UserModel> responseStream,
+         ServerCallContext context)
+        {
+            if (request == null)
+                throw new ArgumentNullException(nameof(request));
+
+            var users = await GetAllUsers();
+
+            foreach (var user in users)
+            {
+                await Task.Delay(1000);
+                var userModel = user.ParseToUserModel();
+                await responseStream.WriteAsync(userModel);
+            }
+        }
+
         public override async Task<ProductModel> CalculateDiscount(ProductLookUpModel request, ServerCallContext context)
         {
 

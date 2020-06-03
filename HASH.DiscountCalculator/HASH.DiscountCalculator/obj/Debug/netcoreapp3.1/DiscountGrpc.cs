@@ -15,6 +15,8 @@ namespace HASH.DiscountCalculator {
     static readonly grpc::Marshaller<global::HASH.DiscountCalculator.ProductLookUpModel> __Marshaller_ProductLookUpModel = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::HASH.DiscountCalculator.ProductLookUpModel.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::HASH.DiscountCalculator.ProductModel> __Marshaller_ProductModel = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::HASH.DiscountCalculator.ProductModel.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::HASH.DiscountCalculator.ProductsRequest> __Marshaller_ProductsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::HASH.DiscountCalculator.ProductsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::HASH.DiscountCalculator.UsersRequest> __Marshaller_UsersRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::HASH.DiscountCalculator.UsersRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::HASH.DiscountCalculator.UserModel> __Marshaller_UserModel = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::HASH.DiscountCalculator.UserModel.Parser.ParseFrom);
 
     static readonly grpc::Method<global::HASH.DiscountCalculator.ProductLookUpModel, global::HASH.DiscountCalculator.ProductModel> __Method_CalculateDiscount = new grpc::Method<global::HASH.DiscountCalculator.ProductLookUpModel, global::HASH.DiscountCalculator.ProductModel>(
         grpc::MethodType.Unary,
@@ -29,6 +31,13 @@ namespace HASH.DiscountCalculator {
         "GetAllProducts",
         __Marshaller_ProductsRequest,
         __Marshaller_ProductModel);
+
+    static readonly grpc::Method<global::HASH.DiscountCalculator.UsersRequest, global::HASH.DiscountCalculator.UserModel> __Method_GetAllUsers = new grpc::Method<global::HASH.DiscountCalculator.UsersRequest, global::HASH.DiscountCalculator.UserModel>(
+        grpc::MethodType.ServerStreaming,
+        __ServiceName,
+        "GetAllUsers",
+        __Marshaller_UsersRequest,
+        __Marshaller_UserModel);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -50,6 +59,11 @@ namespace HASH.DiscountCalculator {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      public virtual global::System.Threading.Tasks.Task GetAllUsers(global::HASH.DiscountCalculator.UsersRequest request, grpc::IServerStreamWriter<global::HASH.DiscountCalculator.UserModel> responseStream, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
@@ -58,7 +72,8 @@ namespace HASH.DiscountCalculator {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_CalculateDiscount, serviceImpl.CalculateDiscount)
-          .AddMethod(__Method_GetAllProducts, serviceImpl.GetAllProducts).Build();
+          .AddMethod(__Method_GetAllProducts, serviceImpl.GetAllProducts)
+          .AddMethod(__Method_GetAllUsers, serviceImpl.GetAllUsers).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -69,6 +84,7 @@ namespace HASH.DiscountCalculator {
     {
       serviceBinder.AddMethod(__Method_CalculateDiscount, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::HASH.DiscountCalculator.ProductLookUpModel, global::HASH.DiscountCalculator.ProductModel>(serviceImpl.CalculateDiscount));
       serviceBinder.AddMethod(__Method_GetAllProducts, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::HASH.DiscountCalculator.ProductsRequest, global::HASH.DiscountCalculator.ProductModel>(serviceImpl.GetAllProducts));
+      serviceBinder.AddMethod(__Method_GetAllUsers, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::HASH.DiscountCalculator.UsersRequest, global::HASH.DiscountCalculator.UserModel>(serviceImpl.GetAllUsers));
     }
 
   }

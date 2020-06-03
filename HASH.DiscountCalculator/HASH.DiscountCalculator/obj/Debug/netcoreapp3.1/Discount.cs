@@ -26,19 +26,24 @@ namespace HASH.DiscountCalculator {
           string.Concat(
             "ChVQcm90b3MvZGlzY291bnQucHJvdG8iNwoSUHJvZHVjdExvb2tVcE1vZGVs",
             "Eg4KBnVzZXJJZBgBIAEoCRIRCglwcm9kdWN0SWQYAiABKAkiEQoPUHJvZHVj",
-            "dHNSZXF1ZXN0IngKDFByb2R1Y3RNb2RlbBIKCgJpZBgBIAEoCRIWCg5wcmlj",
-            "ZV9pbl9jZW50cxgCIAEoBRINCgV0aXRsZRgDIAEoCRITCgtkZXNjcmlwdGlv",
-            "bhgEIAEoCRIgCghkaXNjb3VudBgFIAEoCzIOLkRpc2NvdW50TW9kZWwiNAoN",
-            "RGlzY291bnRNb2RlbBILCgNwY3QYASABKAISFgoOdmFsdWVfaW5fY2VudHMY",
-            "AiABKAUyeAoIRGlzY291bnQSNwoRQ2FsY3VsYXRlRGlzY291bnQSEy5Qcm9k",
-            "dWN0TG9va1VwTW9kZWwaDS5Qcm9kdWN0TW9kZWwSMwoOR2V0QWxsUHJvZHVj",
-            "dHMSEC5Qcm9kdWN0c1JlcXVlc3QaDS5Qcm9kdWN0TW9kZWwwAUIaqgIXSEFT",
-            "SC5EaXNjb3VudENhbGN1bGF0b3JiBnByb3RvMw=="));
+            "dHNSZXF1ZXN0Ig4KDFVzZXJzUmVxdWVzdCJVCglVc2VyTW9kZWwSCgoCaWQY",
+            "ASABKAkSEgoKZmlyc3RfbmFtZRgCIAEoCRIRCglsYXN0X25hbWUYAyABKAkS",
+            "FQoNZGF0ZV9vZl9iaXJ0aBgEIAEoCSJ4CgxQcm9kdWN0TW9kZWwSCgoCaWQY",
+            "ASABKAkSFgoOcHJpY2VfaW5fY2VudHMYAiABKAUSDQoFdGl0bGUYAyABKAkS",
+            "EwoLZGVzY3JpcHRpb24YBCABKAkSIAoIZGlzY291bnQYBSABKAsyDi5EaXNj",
+            "b3VudE1vZGVsIjQKDURpc2NvdW50TW9kZWwSCwoDcGN0GAEgASgCEhYKDnZh",
+            "bHVlX2luX2NlbnRzGAIgASgFMqQBCghEaXNjb3VudBI3ChFDYWxjdWxhdGVE",
+            "aXNjb3VudBITLlByb2R1Y3RMb29rVXBNb2RlbBoNLlByb2R1Y3RNb2RlbBIz",
+            "Cg5HZXRBbGxQcm9kdWN0cxIQLlByb2R1Y3RzUmVxdWVzdBoNLlByb2R1Y3RN",
+            "b2RlbDABEioKC0dldEFsbFVzZXJzEg0uVXNlcnNSZXF1ZXN0GgouVXNlck1v",
+            "ZGVsMAFCGqoCF0hBU0guRGlzY291bnRDYWxjdWxhdG9yYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::HASH.DiscountCalculator.ProductLookUpModel), global::HASH.DiscountCalculator.ProductLookUpModel.Parser, new[]{ "UserId", "ProductId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::HASH.DiscountCalculator.ProductsRequest), global::HASH.DiscountCalculator.ProductsRequest.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::HASH.DiscountCalculator.UsersRequest), global::HASH.DiscountCalculator.UsersRequest.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::HASH.DiscountCalculator.UserModel), global::HASH.DiscountCalculator.UserModel.Parser, new[]{ "Id", "FirstName", "LastName", "DateOfBirth" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::HASH.DiscountCalculator.ProductModel), global::HASH.DiscountCalculator.ProductModel.Parser, new[]{ "Id", "PriceInCents", "Title", "Description", "Discount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::HASH.DiscountCalculator.DiscountModel), global::HASH.DiscountCalculator.DiscountModel.Parser, new[]{ "Pct", "ValueInCents" }, null, null, null, null)
           }));
@@ -305,6 +310,320 @@ namespace HASH.DiscountCalculator {
 
   }
 
+  public sealed partial class UsersRequest : pb::IMessage<UsersRequest> {
+    private static readonly pb::MessageParser<UsersRequest> _parser = new pb::MessageParser<UsersRequest>(() => new UsersRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<UsersRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::HASH.DiscountCalculator.DiscountReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UsersRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UsersRequest(UsersRequest other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UsersRequest Clone() {
+      return new UsersRequest(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as UsersRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(UsersRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(UsersRequest other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class UserModel : pb::IMessage<UserModel> {
+    private static readonly pb::MessageParser<UserModel> _parser = new pb::MessageParser<UserModel>(() => new UserModel());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<UserModel> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::HASH.DiscountCalculator.DiscountReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UserModel() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UserModel(UserModel other) : this() {
+      id_ = other.id_;
+      firstName_ = other.firstName_;
+      lastName_ = other.lastName_;
+      dateOfBirth_ = other.dateOfBirth_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UserModel Clone() {
+      return new UserModel(this);
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private string id_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Id {
+      get { return id_; }
+      set {
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "first_name" field.</summary>
+    public const int FirstNameFieldNumber = 2;
+    private string firstName_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string FirstName {
+      get { return firstName_; }
+      set {
+        firstName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "last_name" field.</summary>
+    public const int LastNameFieldNumber = 3;
+    private string lastName_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string LastName {
+      get { return lastName_; }
+      set {
+        lastName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "date_of_birth" field.</summary>
+    public const int DateOfBirthFieldNumber = 4;
+    private string dateOfBirth_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string DateOfBirth {
+      get { return dateOfBirth_; }
+      set {
+        dateOfBirth_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as UserModel);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(UserModel other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Id != other.Id) return false;
+      if (FirstName != other.FirstName) return false;
+      if (LastName != other.LastName) return false;
+      if (DateOfBirth != other.DateOfBirth) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
+      if (FirstName.Length != 0) hash ^= FirstName.GetHashCode();
+      if (LastName.Length != 0) hash ^= LastName.GetHashCode();
+      if (DateOfBirth.Length != 0) hash ^= DateOfBirth.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (FirstName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(FirstName);
+      }
+      if (LastName.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(LastName);
+      }
+      if (DateOfBirth.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(DateOfBirth);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      }
+      if (FirstName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(FirstName);
+      }
+      if (LastName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(LastName);
+      }
+      if (DateOfBirth.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DateOfBirth);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(UserModel other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Id.Length != 0) {
+        Id = other.Id;
+      }
+      if (other.FirstName.Length != 0) {
+        FirstName = other.FirstName;
+      }
+      if (other.LastName.Length != 0) {
+        LastName = other.LastName;
+      }
+      if (other.DateOfBirth.Length != 0) {
+        DateOfBirth = other.DateOfBirth;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            FirstName = input.ReadString();
+            break;
+          }
+          case 26: {
+            LastName = input.ReadString();
+            break;
+          }
+          case 34: {
+            DateOfBirth = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
   public sealed partial class ProductModel : pb::IMessage<ProductModel> {
     private static readonly pb::MessageParser<ProductModel> _parser = new pb::MessageParser<ProductModel>(() => new ProductModel());
     private pb::UnknownFieldSet _unknownFields;
@@ -313,7 +632,7 @@ namespace HASH.DiscountCalculator {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::HASH.DiscountCalculator.DiscountReflection.Descriptor.MessageTypes[2]; }
+      get { return global::HASH.DiscountCalculator.DiscountReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -560,7 +879,7 @@ namespace HASH.DiscountCalculator {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::HASH.DiscountCalculator.DiscountReflection.Descriptor.MessageTypes[3]; }
+      get { return global::HASH.DiscountCalculator.DiscountReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

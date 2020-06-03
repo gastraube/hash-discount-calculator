@@ -5,6 +5,7 @@ option csharp_namespace = "HASH.DiscountCalculator";
 service Discount {
   rpc CalculateDiscount (ProductLookUpModel) returns (ProductModel);
   rpc GetAllProducts (ProductsRequest) returns (stream ProductModel);
+  rpc GetAllUsers (UsersRequest) returns (stream UserModel);
 }
 
 message ProductLookUpModel {
@@ -14,6 +15,17 @@ message ProductLookUpModel {
 
 message ProductsRequest{
 
+}
+
+message UsersRequest{
+
+}
+
+message UserModel {
+  string id = 1;
+  string first_name = 2;
+  string last_name = 3;
+  string date_of_birth = 4;
 }
 
 message ProductModel {

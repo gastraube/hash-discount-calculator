@@ -6,7 +6,7 @@ class MessageView extends View {
     
    template(model) {
        
-       return model.text ? `<p class="alert alert-info">${model.text}</p>` : '<p></p>';
+       return model.text ? `<div class="alert alert-primary" role="alert">${model.text}</div>` : '<div></div>';
    }
 
    update(model) {

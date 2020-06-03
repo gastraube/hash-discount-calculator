@@ -7,4 +7,7 @@ module.exports  = function(app) {
 
     app.route('/products')
         .get(api.products);
+
+    app.route('/users')
+        .get(api.users);
 };

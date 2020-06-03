@@ -14,5 +14,16 @@ namespace HASH.DiscountCalculator.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public DateTime BirthDate { get; set; }
+
+        public UserModel ParseToUserModel()
+        {
+            return new UserModel()
+            {
+                Id = Id,
+                FirstName = FirstName,
+                LastName = LastName,
+                DateOfBirth = BirthDate.ToString()
+            };
+        }
     }
 }
