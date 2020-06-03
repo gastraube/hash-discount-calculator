@@ -28,12 +28,3 @@ db.Products.insertMany([
         Title : "Monitor LED"
     }
 ])
-
-         
-            new Product()
-            {
-                Id = "5",
-                Description = "Tênis de corrida, preto, Nike.",
-                PriceCents = 570,
-                Title = "Tênis de Corrida"
-            }
