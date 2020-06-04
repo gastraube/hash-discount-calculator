@@ -1,0 +1,25 @@
+version: '3'
+services:
+  hashdiscountcalculator:
+    build: ./HASH.DiscountCalculator
+    image: hash-discount-calculator
+    stdin_open: true
+    tty: true
+    depends_on:
+      - mongo
+    environment:
+      - GRPC_PORT=50051
+    ports:
+      - 50051:50051
+  hashproductlist:
+    build: ./HASH.ProductList/server/
+    image: hash-product-list
+    environment:
+      - NODE_PORT=3000
+      - GRPC_PORT=50051
+    ports:
+      - 3000:3000
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
