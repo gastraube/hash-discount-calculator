@@ -20,7 +20,7 @@ var discount_proto = grpc.loadPackageDefinition(packageDefinition);
 var client = new discount_proto.Discount(serverPort, grpc.credentials.createInsecure());
 
 api.product = function(req, res) {
-    client.CalculateDiscount(req.body, function(err, response) {
+    client.CalculateDiscount(req.body, function(err, response) {      
         res.status(200).json(response);
     });
  };
@@ -35,6 +35,7 @@ api.product = function(req, res) {
       });
     
     call.on('end',function(){
+        console.log(products)
         res.status(200).json(products);
     });      
  };

@@ -6,4 +6,3 @@ var http = require('http')
 http.createServer(app).listen(PORT, function() {
     console.log('Server listening the port: ' + this.address().port);
 });
-
