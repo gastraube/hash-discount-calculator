@@ -5,4 +5,4 @@ This application uses two microservices to calculate products discounts and show
 ![Solution Architecture](https://github.com/gastraube/hash-discount-calculator/blob/master/HASH.ProductsList/client/img/scheme.JPG?raw=true)
 
 ## Projet Description: 
-![Service 1]
+###Service 1
