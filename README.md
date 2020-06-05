@@ -7,7 +7,7 @@ This application uses two microservices to calculate products discounts and show
 
 ## How To Run
 
-Run the command docker-compose up at the root folder  
+Run the command **docker-compose up** at the root folder  
 Access the address localhost:3000 via browser
 
 ## Projet Description 
