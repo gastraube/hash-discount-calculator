@@ -27,8 +27,7 @@ api.product = function(req, res) {
  };
 
  api.products = function(req, res) {
-    console.log(PORT)
-    console.log(HOST)
+    console.log(client)
     var call = client.GetAllProducts(null);
 
     var products =[];

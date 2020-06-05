@@ -25,7 +25,7 @@ namespace HASH.DiscountCalculator
 
             var context = new Data.Context(MongoPort, MongoHost);
             var productRepository = new ProductRepository(context);
-            var userRepository = new UserRepository(context);           
+            var userRepository = new UserRepository(context);            
 
             Server server = new Server
             {
