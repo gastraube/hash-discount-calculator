@@ -10,7 +10,7 @@ namespace HASH.DiscountCalculator.Tests.Services
     public class ProductTests
     {
         [Fact]
-        public async Task NewProductHasANewDiscount()
+        public void NewProductHasANewDiscount()
         {
             var product = new Product();
 

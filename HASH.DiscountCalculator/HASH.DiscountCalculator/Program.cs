@@ -19,10 +19,13 @@ namespace HASH.DiscountCalculator
         {
 
             var configuration = new ConfigurationBuilder().AddEnvironmentVariables().Build();
-            var Port = int.Parse(configuration.GetValue<string>("GRPC_PORT") ?? "50051");
+            var Port = int.Parse(configuration.GetValue<string>("PORT") ?? "50051");
+            var MongoPort = configuration.GetValue<string>("MONGO_PORT") ?? "27017";
+            var MongoHost = configuration.GetValue<string>("MONGO_HOST") ?? "localhost";
 
-            var productRepository = new ProductRepository(new Data.Context());
-            var userRepository = new UserRepository(new Data.Context());           
+            var context = new Data.Context(MongoPort, MongoHost);
+            var productRepository = new ProductRepository(context);
+            var userRepository = new UserRepository(context);           
 
             Server server = new Server
             {
@@ -31,7 +34,7 @@ namespace HASH.DiscountCalculator
             };
             server.Start();
 
-            Console.WriteLine("Server listening on port " + Port);
+            Console.WriteLine("Server listening on port " + Port);        
             Console.WriteLine("Press any key to stop the server...");
             Console.ReadKey();
 

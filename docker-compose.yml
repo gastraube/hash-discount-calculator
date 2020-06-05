@@ -8,7 +8,9 @@ services:
     depends_on:
       - mongo
     environment:
-      - GRPC_PORT=50051
+      - PORT=50051
+      - MONGO_PORT=27017
+      - MONGO_HOST=mongo
     ports:
       - 50051:50051
   hashproductlist:
@@ -16,10 +18,18 @@ services:
     image: hash-product-list
     environment:
       - NODE_PORT=3000
-      - GRPC_PORT=50051
+      - HASHCALCULATOR_PORT=50051
+      - HASHCALCULATOR_HOST=hashdiscountcalculator
     ports:
       - 3000:3000
   mongo:
-    image: mongo
+    image: mongo:latest
+    container_name: mongodb
+    restart: always
+    environment:      
+      MONGO_INITDB_DATABASE: DiscountCalculator
     ports:
-      - "27017:27017"
+        - 27017:27017
+    volumes:
+        - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+      

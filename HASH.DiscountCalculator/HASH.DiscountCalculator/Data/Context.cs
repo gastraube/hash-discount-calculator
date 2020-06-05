@@ -9,11 +9,11 @@ namespace HASH.DiscountCalculator.Data
 {
     public class Context : IContext
     {
-        private readonly IMongoDatabase database;
+        private readonly IMongoDatabase database;        
 
-        public Context()
+        public Context(string port, string host)
         {
-            database = new MongoClient("mongodb://localhost:27017").GetDatabase("DiscountCalculator");
+            database = new MongoClient($"mongodb://{host}:{port}").GetDatabase("DiscountCalculator");
         }
 
         public IMongoCollection<Product> Products

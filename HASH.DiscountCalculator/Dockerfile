@@ -6,5 +6,4 @@ RUN dotnet publish -c Release -o out
 FROM mcr.microsoft.com/dotnet/core/aspnet
 WORKDIR /app
 COPY --from=build-env /build/out .
-EXPOSE 80
 ENTRYPOINT ["dotnet", "HASH.DiscountCalculator.dll"]

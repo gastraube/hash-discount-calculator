@@ -1,11 +1,12 @@
-var PORT = process.env.GRPC_PORT || 50051 
+var PORT = process.env.HASHCALCULATOR_PORT || 50051 
+var HOST = process.env.HASHCALCULATOR_HOST || "localhost" 
 
 var api = {}
 
 var protoPath = __dirname + '/discount.proto';
 var grpc = require('grpc');
 var protoLoader = require('@grpc/proto-loader');
-var serverPort = 'localhost:' + PORT
+var serverPort = `${HOST}:` + PORT
 
 var packageDefinition = protoLoader.loadSync(
     protoPath,
@@ -26,6 +27,8 @@ api.product = function(req, res) {
  };
 
  api.products = function(req, res) {
+    console.log(PORT)
+    console.log(HOST)
     var call = client.GetAllProducts(null);
 
     var products =[];
