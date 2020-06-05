@@ -1,5 +1,5 @@
 # Hash Discount Simulator
-This application uses two microservices to calculate products discounts and show them in a web page.
+This application uses two microservices to calculate products discounts, according the selected User and the selected Today Date, and show them in a web page.
 
 ## Architecture: 
 ![Solution Architecture](https://github.com/gastraube/hash-discount-calculator/blob/master/HASH.ProductsList/server/client/img/scheme.JPG?raw=true)
