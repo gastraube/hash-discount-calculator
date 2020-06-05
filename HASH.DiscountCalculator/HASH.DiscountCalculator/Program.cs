@@ -30,7 +30,7 @@ namespace HASH.DiscountCalculator
             Server server = new Server
             {
                 Services = { Discount.BindService(new DiscountService(productRepository, userRepository)) },
-                Ports = { new ServerPort("localhost", Port, ServerCredentials.Insecure) }
+                Ports = { new ServerPort("0.0.0.0", Port, ServerCredentials.Insecure) }
             };
             server.Start();
 
