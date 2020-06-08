@@ -20,6 +20,7 @@ namespace HASH.DiscountCalculator
 
             var configuration = new ConfigurationBuilder().AddEnvironmentVariables().Build();
             var Port = int.Parse(configuration.GetValue<string>("PORT") ?? "50051");
+            var Host = configuration.GetValue<string>("HOST") ?? "localhost";
             var MongoPort = configuration.GetValue<string>("MONGO_PORT") ?? "27017";
             var MongoHost = configuration.GetValue<string>("MONGO_HOST") ?? "localhost";
 
@@ -30,7 +31,7 @@ namespace HASH.DiscountCalculator
             Server server = new Server
             {
                 Services = { Discount.BindService(new DiscountService(productRepository, userRepository)) },
-                Ports = { new ServerPort("0.0.0.0", Port, ServerCredentials.Insecure) }
+                Ports = { new ServerPort(Host, Port, ServerCredentials.Insecure) }
             };
             server.Start();
 
